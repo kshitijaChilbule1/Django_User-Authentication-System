@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    width: 100%;
+    min-width: auto;
+    height: auto;
+    min-height: 700px;
+    background-color:black;
+}
+.navbar{
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    width: 100%;
+    padding: 30px 50px;
+    align-items: center; 
+}
+.navbar ul{
+    flex:1;
+    text-align: right;
+}
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 25px;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  position: relative;
+}
+.navbar ul li a:after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.navbar ul li a:hover:after{
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+.logo{
+    width: 80px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    padding-top: 6rem;
+}
+.header-content, .hero-img{
+    flex-basis: 50%;
+    padding: 5rem;
+}
+.header-content h1{
+    font-size: 10vmin;
+    margin-bottom: 30px;
+    margin-top: 1rem;
+    background: -webkit-linear-gradient(#fff, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.explore{
+    padding: 10px 20px;
+    border: 1px solid blue;
+    background: linear-gradient(to bottom right, rgb(162, 123, 247), blue);
+    color: #fff;
+    margin-right: 30px;
+    text-decoration: none;
+    font-weight: 500;
+}
+.explore:hover{
+    background: linear-gradient(to bottom right, blue, rgb(162, 123, 247));
+    border: none;
+    color: #fff;
+}
+.hero-img img{
+    margin-left: 60px;
+    margin-top: -10px;
+    width: 500px;
+}
+</style>
+<body>
+    <header>
+        <nav class="navbar">
+            <img src="../static/images/logo.png" alt="logo" class="logo">
+            <ul class="nav-list">
+                <li><a href="http://127.0.0.1:8000/">HOME</a></li>
+                <li><a href="http://127.0.0.1:8000/login_user">SIGN IN</a></li>
+                <li><a href="http://127.0.0.1:8000/register/">REGISTER</a></li>
+            </ul>
+        </nav>
+        <div class="row">
+            <div class="header-content">
+                <h1>SynchroChat</h1>
+                <a href="#" class="explore">EXPLORE</a>
+            </div>
+            <div class="hero-img">
+                <img src="../static/images/bg.svg" alt="">
+            </div>
+        </div>
+    </header>
